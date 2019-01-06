@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package grpc.example;
+
+option java_multiple_files = true;
+option java_package = "com.demo.example.grpc";
+option java_outer_classname = "ExampleProto";
+
+service Example {
+    rpc checkExample (ExampleRequest) retruns (ExampleResponse);
+}
+
+message ExampleRequest {
+    string request = 1;
+}
+
+message ExampleRequest {
+    string response = 1;
+}
